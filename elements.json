@@ -1,0 +1,99 @@
+{
+    "elementsToParse": [
+        {
+            "elementName": "blockquotes",
+            "matchPattern": "^([\\t ]*(?:\\r?\\n|\\r))+((?:>.*\\n)+)^([\\t ]*(?:\\r?\\n|\\r))+",
+            "substitutionPattern": "$1<blockquote>\n$2</blockquote>\n$3"
+        },
+        {
+            "elementName": "paragraphsInBlockquotes",
+            "matchPattern": "^>\\s([^\\>\\n]*)",
+            "substitutionPattern": "<p>$1</p>"
+        },
+        {
+            "elementName": "title",
+            "matchPattern": "^#{1,6}([^\\n]+)$",
+            "substitutionPattern": "<hx>$1</hx>"
+        },
+        {
+            "elementName": "titleLevel",
+            "matchPattern": "^#{1,6}",
+            "substitutionPattern": ""
+        },
+        {
+            "elementName": "ol",
+            "matchPattern": "^([\\t ]*(?:\\r?\\n|\\r))+((^\\d+\\.\\s(?:[^\\n])+$\\n)+)^([\\t ]*(?:\\r?\\n|\\r))+",
+            "substitutionPattern": "$1<ol>$2</ol>$3"
+        },
+        {
+            "elementName": "oli",
+            "matchPattern": "(^\\d+\\.\\s)([^\\n]+)",
+            "substitutionPattern": "<li>$2</li>"
+        },
+        {
+            "elementName": "ul",
+            "matchPattern": "^(\\+|\\*|\\-)\\s([^\\+\\*\\-\\n]+)",
+            "substitutionPattern": "<ul>$2</ul>"
+        },
+        {
+            "elementName": "uli",
+            "matchPattern": "(^\\d+\\.\\s(?:[^\\n])+)",
+            "substitutionPattern": "<li>$2</li>"
+        },
+        {
+            "elementName": "inlineCode",
+            "matchPattern": "\\x60{1}([^\\x60\\s]+)\\x60{1}|\\x60{2}([^\\n]+)\\x60{2}",
+            "substitutionPattern": "<code>$1$2</code>"
+        },
+        {
+            "elementName": "multilineCode",
+            "matchPattern": "^(?:[\\t ]*(?:\\r?\\n|\\r))+((?:\\t.+\\n)+)^(?:[\\t ]*(?:\\r?\\n|\\r))+|^\\x60{3}(?:.+)$\\n((?:.+\\n)+)^\\x60{3}$",
+            "substitutionPattern": "<pre><code>$1$2</code></pre>"
+        },
+        {
+            "elementName": "horizontalLine",
+            "matchPattern": "^(?:[\\t ]*(?:\\r?\\n|\\r))+^(\\-{3,}|\\*{3,}|\\_{3,})$",
+            "substitutionPattern": "<hr>"
+        },
+        {
+            "elementName": "paragraphs",
+            "matchPattern": "^([\\d\\w\\*\\_]{2,}.+)",
+            "substitutionPattern": "<p>$1</p>"
+        },
+        {
+            "elementName": "lineReturn",
+            "matchPattern": "\\s{2}$",
+            "substitutionPattern": "<br />"
+        },
+        {
+            "elementName": "bareUrl",
+            "matchPattern": "<(.+)>",
+            "substitutionPattern": "<a href=\"$1\">$1</a>"
+        },
+        {
+            "elementName": "imgLink",
+            "matchPattern": "!\\[([^\\[\\]]+)\\]\\((\\S+)\\s?\\\"?([^\\\"]*)\\\"?\\)",
+            "substitutionPattern": "<img src=\"$2\" alt=\"$1\" title=\"$3\">"
+        },
+        {
+            "elementName": "regularLink",
+            "matchPattern": "([^!])\\[([^\\[\\]]+|!\\[.+)\\]\\((\\S+)\\s?\\\"?([^\\\"]*)\\\"?\\)",
+            "substitutionPattern": "$1<a href=\"$3\" alt=\"$4\">$2</a>"
+        },
+        {
+            "elementName": "bold",
+            "matchPattern": "([^\\*\\_])[\\*\\_]{2}([^\\*\\_]+)[\\*\\_]{2}",
+            "substitutionPattern": "$1<b>$2</b>"
+        },
+        {
+            "elementName": "italic",
+            "matchPattern": "([^\\*\\_])[\\*\\_]{1}([^\\*\\_]+)[\\*\\_]{1}",
+            "substitutionPattern": "$1<i>$2</i>"
+        },
+        {
+            "elementName": "boldAndItalic",
+            "matchPattern": "([^\\*\\_])[\\*\\_]{3}([^\\*\\_]+)[\\*\\_]{3}",
+            "substitutionPattern": "$1<b><i>$2</i></b>"
+        }
+    ]
+}
