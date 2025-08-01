@@ -13,7 +13,7 @@
         {
             "elementName": "title",
             "matchPattern": "^#{1,6}([^\\n]+)$",
-            "substitutionPattern": "<hx>$1</hx>"
+            "substitutionPattern": "<h1>$1</h1>"
         },
         {
             "elementName": "titleLevel",
@@ -23,7 +23,7 @@
         {
             "elementName": "ol",
             "matchPattern": "^([\\t ]*(?:\\r?\\n|\\r))+((^\\d+\\.\\s(?:[^\\n])+$\\n)+)^([\\t ]*(?:\\r?\\n|\\r))+",
-            "substitutionPattern": "$1<ol>$2</ol>$3"
+            "substitutionPattern": "$1<ol>\n$2</ol>$4"
         },
         {
             "elementName": "oli",
@@ -32,33 +32,18 @@
         },
         {
             "elementName": "ul",
-            "matchPattern": "^(\\+|\\*|\\-)\\s([^\\+\\*\\-\\n]+)",
-            "substitutionPattern": "<ul>$2</ul>"
+            "matchPattern": "^([\\t ]*(?:\\r?\\n|\\r))+(^[\\-\\+\\*]\\s[^\\n]+\\n)+",
+            "substitutionPattern": "$1<ul>$0</ul>$1"
         },
         {
             "elementName": "uli",
-            "matchPattern": "(^\\d+\\.\\s(?:[^\\n])+)",
+            "matchPattern": "^(\\+|\\*|\\-)\\s([^\\+\\*\\-\\n]+)",
             "substitutionPattern": "<li>$2</li>"
         },
         {
-            "elementName": "inlineCode",
-            "matchPattern": "\\x60{1}([^\\x60\\s]+)\\x60{1}|\\x60{2}([^\\n]+)\\x60{2}",
-            "substitutionPattern": "<code>$1$2</code>"
-        },
-        {
-            "elementName": "multilineCode",
-            "matchPattern": "^(?:[\\t ]*(?:\\r?\\n|\\r))+((?:\\t.+\\n)+)^(?:[\\t ]*(?:\\r?\\n|\\r))+|^\\x60{3}(?:.+)$\\n((?:.+\\n)+)^\\x60{3}$",
-            "substitutionPattern": "<pre><code>$1$2</code></pre>"
-        },
-        {
             "elementName": "horizontalLine",
-            "matchPattern": "^(?:[\\t ]*(?:\\r?\\n|\\r))+^(\\-{3,}|\\*{3,}|\\_{3,})$",
-            "substitutionPattern": "<hr>"
-        },
-        {
-            "elementName": "paragraphs",
-            "matchPattern": "^([\\d\\w\\*\\_]{2,}.+)",
-            "substitutionPattern": "<p>$1</p>"
+            "matchPattern": "^([\\t ]*(?:\\r?\\n|\\r))+^(\\-{3,}|\\*{3,}|\\_{3,})$",
+            "substitutionPattern": "$1<hr>"
         },
         {
             "elementName": "lineReturn",
@@ -66,9 +51,9 @@
             "substitutionPattern": "<br />"
         },
         {
-            "elementName": "bareUrl",
-            "matchPattern": "<(.+)>",
-            "substitutionPattern": "<a href=\"$1\">$1</a>"
+            "elementName": "paragraphs",
+            "matchPattern": "^([\\d\\w\\*\\_]{2,}.+|[\\d\\w\\*\\_]\\s.+)",
+            "substitutionPattern": "<p>$1</p>"
         },
         {
             "elementName": "imgLink",
@@ -77,7 +62,7 @@
         },
         {
             "elementName": "regularLink",
-            "matchPattern": "([^!])\\[([^\\[\\]]+|!\\[.+)\\]\\((\\S+)\\s?\\\"?([^\\\"]*)\\\"?\\)",
+            "matchPattern": "([^!])\\[([^\\[\\]\\!]+)\\]\\(([^\\s\\)\\n]+)\\s?\\\"?([^\\\"\\n]*)\\\"?\\)",
             "substitutionPattern": "$1<a href=\"$3\" alt=\"$4\">$2</a>"
         },
         {

@@ -54,33 +54,4 @@ Latent fontesque oscula quoque, uritur et tot festis non nullum laetabitur, fama
 
 Proterit a dedit liceatque eo esse faciendus super vestigatque subito manus nubila mirabile pectine. Fulgure superatus tellusque vestigia. Fuerant more viderunt, simplex ensem fugit, sint nec et. Oscula et demi sed?
 
-```java
-if (lossyCdfs) {
-    aiff(card_clean_skin, address(27), hyper_mebibyte_ppl);
-} else {
-    pcTextStick += petaflops_plagiarism_ict + joystick_dot_logic;
-    favicon_interface_upnp *= tweet_router_rpm;
-    remoteFunctionZebibyte(address, namespaceCharacter(midi_drive_sli, 2,
-            sound), impression(computerFrameSupercomputer, -4, 1));
-}
-var sms = xmp.wins.sequenceIpv(sync(83, function));
-resolutionGnu.server += digitalSuperscalarHorizontal;
-if (ppmDocumentSsd - toslinkCameraMenu) {
-    drag.png(dvd_cybersquatter, commercial_terabyte_winsock);
-    snmp(firewireSpool + 54, basebandBarEup, -1 * -2);
-} else {
-    push.shortcut_nntp_stick += bar(whitelist_vrml, sms, rup_real_minimize)
-            - keywords(activexServer);
-}
-if (file_character_plagiarism >= wysiwyg) {
-    map_import(standalone_ide.ad(50), 73, chipsetInfringement);
-    paritySoftwareDatabase += emoticon_payload;
-    kbpsStateString = compatibleSuffix.serp_torrent_website.memory_wamp(
-            cifs(nvram_freeware_balance));
-} else {
-    sip = raw_non.thirdQueue(ocr_bin, 2) + input;
-    shift_end(networkingDefaultDesktop - ring_winsock_rate);
-}
-```
-
-Ventis arbor condiderat qui facere sonuit! Quibus illa novissima **et natasque** spectari Byblida, huic humum successu cognataque `\`` carminibus regunt, onere sis tristis, at?
+Ventis arbor condiderat qui facere sonuit! Quibus illa novissima **et natasque** spectari Byblida, huic humum successu cognataque carminibus regunt, onere sis tristis, at?
